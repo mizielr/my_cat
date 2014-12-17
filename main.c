@@ -1,9 +1,9 @@
 /*
 ** main.c for my_cat in /Users/robertmizielski/ETNA/my_cat/miziel_r
-** 
+**
 ** Made by MIZIELSKI Robert
 ** Login   <miziel_r@etna-alternance.net>
-** 
+**
 ** Started on  Fri Dec 12 17:29:17 2014 MIZIELSKI Robert
 ** Last update Sun Dec 14 12:18:42 2014 MIZIELSKI Robert
 */
@@ -41,7 +41,7 @@ int	read_cat(t_opt opts)
 
   my_init(&nl, &nb);
   clean_str(&str[0]);
-  while (read(0, &str, BUFF_SIZE))
+  while (read(0, &str, BUFF_SIZE) > 0)
     {
       str[BUFF_SIZE] = 0;
       exec_cat(str, opts, &nb, &nl);
@@ -61,7 +61,7 @@ int	my_cat(char *filename, t_opt opts)
   if (file == -1)
     return (my_error(filename));
   my_init(&nl, &nb);
-  while (read(file, &str, BUFF_SIZE))
+  while (read(file, &str, BUFF_SIZE) > 0)
     {
       str[BUFF_SIZE] = 0;
       exec_cat(str, opts, &nb, &nl);
