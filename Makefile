@@ -5,7 +5,7 @@
 ## Login   <miziel_r@etna-alternance.net>
 ## 
 ## Started on  Fri Dec 12 17:37:14 2014 MIZIELSKI Robert
-## Last update Wed Dec 17 11:55:16 2014 MIZIELSKI Robert
+## Last update Wed Dec 17 13:43:52 2014 MIZIELSKI Robert
 ##
 
 CC	= gcc
@@ -16,7 +16,7 @@ OBJ	= $(SRC:.c=.o)
 RM	= rm -rf
 
 $(NAME):	$(OBJ)
-		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 all:	$(NAME)
 
